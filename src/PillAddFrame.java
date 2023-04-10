@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 
 public class PillAddFrame extends JFrame implements ActionListener {
-    ImageIcon Img = new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\src\\img\\logo.png");
+    ImageIcon Img = new ImageIcon("src\\img\\logo.png");
     JPanel titlePanel = new JPanel();
     JPanel mainPanel = new JPanel();
 

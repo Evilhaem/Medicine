@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Drug.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Drug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Injection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Injection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Pill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Pill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillAddFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/PillAddFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+    <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/src/PillAddFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PillAddFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681155711362</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix">
+      <created>1681158353899</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681158353899</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +123,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
