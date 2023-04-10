@@ -4,12 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame implements ActionListener {
-    ImageIcon Img = new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\src\\img\\logo.png");
+    ImageIcon Img = new ImageIcon("src\\img\\logo.png");
     JPanel titlePanel = new JPanel();
     JPanel mainPanel = new JPanel();
-    ImageIcon addButtonImg = new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\src\\img\\add.png");
-    ImageIcon dataButtonImg = new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\src\\img\\data.png");
-    ImageIcon closeButtonImg = new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\src\\img\\close.png");
+    ImageIcon addButtonImg = new ImageIcon("src\\img\\add.png");
+    ImageIcon dataButtonImg = new ImageIcon("src\\img\\data.png");
+    ImageIcon closeButtonImg = new ImageIcon("src\\img\\close.png");
     JButton addButton = new JButton("Шинэ нэмэх", scaleImage(addButtonImg, 100, 100));
     JButton dataButton = new JButton("Бүртгэл", scaleImage(dataButtonImg, 100, 100));
     JButton closeButton = new JButton("Гарах", scaleImage(closeButtonImg, 100, 100));
