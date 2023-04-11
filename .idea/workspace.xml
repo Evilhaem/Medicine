@@ -4,42 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-dbutils-1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-j-8.0.32.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/rs2xml.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Connector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrugFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InjectionDatabaseFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InjectionFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PillDatabaseFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PillFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/excluded/DrugFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/excluded/InjectionState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/excluded/PillState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/excluded/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/exit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/injectCircle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/injection.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/pill.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/pill.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="Second commit">
+      <change afterPath="$PROJECT_DIR$/src/dbconfig.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medicine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Medicine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Drug.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Drug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Injection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Pill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillAddFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Drug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Drug.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Injection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pill.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PillAddFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/excluded/InjectionState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excluded/InjectionState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/excluded/PillState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excluded/PillState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/excluded/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/excluded/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681158353899</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Second commit">
+      <created>1681206688037</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681206688037</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,7 +143,8 @@
     </ignored-roots>
     <MESSAGE value="Initial commit" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="Second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
