@@ -4,14 +4,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame implements ActionListener {
-    ImageIcon Img = new ImageIcon("src\\img\\logo.png");
+    ImageIcon Img = new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\logo.png");
     JPanel titlePanel = new JPanel();
     JPanel mainPanel = new JPanel();
-    JButton addPillButton = new JButton("Эм нэмэх", scaleImage(new ImageIcon("src\\img\\pill.jpg"), 100, 100));
-    JButton addInjectionButton = new JButton("Тариа нэмэх", scaleImage(new ImageIcon("src\\img\\injection.jpg"), 100, 100));
-    JButton dataPillButton = new JButton("Эм Бүртгэл", scaleImage(new ImageIcon("src\\img\\pill.png"), 100, 100));
-    JButton dataInjectionButton = new JButton("Тариа Бүртгэл", scaleImage(new ImageIcon("src\\img\\injectCircle.jpg"), 100, 100));
-    JButton closeButton = new JButton("Гарах", scaleImage(new ImageIcon("src\\img\\exit.png"), 100, 100));
+    JButton addPillButton = new JButton("Эм нэмэх", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\pill.jpg"), 100, 100));
+    JButton addInjectionButton = new JButton("Тариа нэмэх", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\injection.jpg"), 100, 100));
+    JButton dataPillButton = new JButton("Эм Бүртгэл", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\pill.png"), 100, 100));
+    JButton dataInjectionButton = new JButton("Тариа Бүртгэл", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\injectCircle.jpg"), 100, 100));
+    JButton closeButton = new JButton("Гарах", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\exit.png"), 100, 100));
 
     MainFrame() {
         //Window settings
