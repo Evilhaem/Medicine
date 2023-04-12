@@ -9,7 +9,8 @@ public abstract class Drug {
     private String expDate;
     private String regDate;
 
-    public Drug(String name, String id, String country, String ingredients, String number, String additional, String manuDate, String expDate, String regDate) {
+    public Drug(String name, String id, String country, String ingredients, String number,
+                String additional, String manuDate, String expDate, String regDate) {
         this.name = name;
         this.id = id;
         this.country = country;
@@ -23,6 +24,7 @@ public abstract class Drug {
 
 
     public String getName() {return name;}
+
     public void setName(String name) {this.name = name;}
     public String getId() {return id;}
     public void setId(String id) {this.id = id;}
@@ -43,7 +45,7 @@ public abstract class Drug {
 
     public static class Pill extends Drug{
         private static Pill instance;
-        private String purpose;
+        private final String purpose;
 
         Pill(String name,
              String id,
