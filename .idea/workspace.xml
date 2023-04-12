@@ -4,38 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="Third commit">
-      <change afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-04-11_09_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-04-11_09_22__Changes_.xml" afterDir="false" />
+    <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="remove unnecessay files">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medicine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Medicine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Drug$Injection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Drug$Injection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Drug$Pill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Drug$Pill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Drug.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Drug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionDatabaseFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/InjectionDatabaseFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionDatabaseFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/InjectionDatabaseFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionDatabaseFrame$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionDatabaseFrame$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionDatabaseFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/InjectionDatabaseFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionFrame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionFrame$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionFrame$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/InjectionFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/InjectionFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillDatabaseFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/PillDatabaseFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillDatabaseFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/PillDatabaseFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillDatabaseFrame$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillDatabaseFrame$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillDatabaseFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/PillDatabaseFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillFrame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillFrame$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillFrame$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/PillFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/PillFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InjectionDatabaseFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InjectionDatabaseFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +32,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -72,27 +45,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/evilh/OneDrive/Documents/ARCHIVE/2022_SPRING/dev/Medicine/lib/rs2xml.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.32988507",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/evilh/OneDrive/Documents/ARCHIVE/2022_SPRING/dev/Medicine/lib/rs2xml.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32988507&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\evilh\Downloads\Medicine\src" />
@@ -155,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681207211431</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove unnecessay files">
+      <created>1681293235756</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681293235756</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +158,9 @@
     <MESSAGE value="fix" />
     <MESSAGE value="Second commit" />
     <MESSAGE value="Third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Third commit" />
+    <MESSAGE value="delete unnecessary files" />
+    <MESSAGE value="remove unnecessay files" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessay files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
