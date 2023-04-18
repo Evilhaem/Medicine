@@ -14,7 +14,7 @@ public class MainFrame extends JFrame implements ActionListener {
     JButton closeButton = new JButton("Гарах", scaleImage(new ImageIcon("src\\img\\exit.png"), 100, 100));
 
     MainFrame() {
-        //Window settings
+        //Configures window settings
         this.setSize(1000, 600);
         this.setTitle("Эм тарианы бүртгэлийн систем");
         this.setIconImage(Img.getImage());
@@ -80,7 +80,7 @@ public class MainFrame extends JFrame implements ActionListener {
         }
     }
 
-    //Zurag croploh function
+    //Function for crop picture
     public ImageIcon scaleImage(ImageIcon icon, int w, int h)
     {
         int nw = icon.getIconWidth();
@@ -96,7 +96,7 @@ public class MainFrame extends JFrame implements ActionListener {
         return new ImageIcon(icon.getImage().getScaledInstance(nw, nh, Image.SCALE_DEFAULT));
     }
 
-    //button constructor
+    //Button constructor
     public JButton buttonSet(JButton button) {
         button.setPreferredSize(new Dimension(140, 170));
         button.setVerticalTextPosition(SwingConstants.BOTTOM);

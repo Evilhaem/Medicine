@@ -24,6 +24,7 @@ public abstract class DatabaseFrame extends javax.swing.JFrame {
     }
     java.sql.Connection conn;
 
+    //Connects to database
     public void Connect() {
         try {
             conn = Connector.getInstance();
@@ -35,6 +36,7 @@ public abstract class DatabaseFrame extends javax.swing.JFrame {
         }
     }
 
+    //Initializes components
     private void initComponents() {
         this.setSize(2000, 2000);
         JPanel jPanel1 = new JPanel();
@@ -171,27 +173,12 @@ public abstract class DatabaseFrame extends javax.swing.JFrame {
         tr.setRowFilter(RowFilter.regexFilter(search));
     }
 
-    public static void main(String[] args) {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException |
-                 UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InjectionDatabaseFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-
-        java.awt.EventQueue.invokeLater(() -> new InjectionDatabaseFrame().setVisible(true));
-    }
-
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtsearch;
     private static JLabel jLabel1;
-    String sql;
+    public String sql;
 
+    //Subclass for DatabaseFrame. Shows Injections
     public static class InjectionDatabaseFrame extends DatabaseFrame {
         @Override
         public void setComponents() {
@@ -200,6 +187,8 @@ public abstract class DatabaseFrame extends javax.swing.JFrame {
             jLabel1.setText("БҮРТГЭГДСЭН ТАРИАНЫ ЖАГСААЛТ");
         }
     }
+
+    //Subclass for DatabaseFrame. Shows Pills
     public static class PillDatabaseFrame extends DatabaseFrame {
         @Override
         public void setComponents() {

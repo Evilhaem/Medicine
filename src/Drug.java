@@ -43,6 +43,7 @@ public abstract class Drug {
     public String getRegDate() {return regDate;}
     public void setRegDate(String regDate) {this.regDate = regDate;}
 
+    //Subclass for Drug. Stores Pill information before pushed to database.
     public static class Pill extends Drug{
         private static Pill instance;
         private final String purpose;
@@ -60,6 +61,7 @@ public abstract class Drug {
             super(name, id, country, ingredients, number, additional, manDate, expDate, regDate);
             this.purpose = purpose;
         }
+        //Implemented Singleton
         public static Pill getInstance(String name,
                                        String id,
                                        String country,
@@ -80,6 +82,7 @@ public abstract class Drug {
         }
     }
 
+    //Subclass for Drug. Stores Injection information before pushed to database.
     public static class Injection extends Drug{
         private static Injection instance;
         private String dose;
@@ -97,6 +100,8 @@ public abstract class Drug {
             super(name, id, country, ingredients, number, additional, manDate, expDate, regDate);
             this.dose = dose;
         }
+
+        //Implemented Singleton
         public static Injection getInstance(String name,
                                        String id,
                                        String country,
@@ -116,6 +121,7 @@ public abstract class Drug {
         public void setDose(String dose) {this.dose = dose;}
     }
 
+    //Implemented FactoryMethod. Creates 2 types of Drug object.
     public static class DrugFactory {
         public static Drug createDrug(String request, String name, String id, String country, String ingredients, String number, String extra, String additional, String manuDate, String expDate, String regDate){
             Drug drug = null;

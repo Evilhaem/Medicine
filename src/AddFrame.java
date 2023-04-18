@@ -24,6 +24,7 @@ public abstract class AddFrame extends javax.swing.JFrame {
         connection = Connector.getInstance();
     }
 
+    //initializes components
     private void initComponents() {
         JPanel jPanel1 = new JPanel();
         jLabel1 = new JLabel();
@@ -273,6 +274,7 @@ public abstract class AddFrame extends javax.swing.JFrame {
     public static class InjectionFrame extends AddFrame {
 
         @Override
+        //Sets a value to components
         public void setComponents() {
             setTitle("INJECTION REGISTRATION");
             jLabel1.setText("ТАРИА ШИНЭЭР БҮРТГЭЛ ҮҮСГЭХ");
@@ -280,7 +282,8 @@ public abstract class AddFrame extends javax.swing.JFrame {
         }
 
         @Override
-        public void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //When clicked add button
+        public void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
             try{
                 String medName = txtName.getText();
                 String medId = txtId.getText();
@@ -331,6 +334,7 @@ public abstract class AddFrame extends javax.swing.JFrame {
         }
 
         @Override
+        //when clicked database button
         public void jButton2ActionPerformed(ActionEvent evt) {
             DatabaseFrame.InjectionDatabaseFrame db = new DatabaseFrame.InjectionDatabaseFrame();
             db.setVisible(true);
@@ -341,6 +345,7 @@ public abstract class AddFrame extends javax.swing.JFrame {
     public static class PillFrame extends AddFrame {
 
         @Override
+        //Sets a value to components
         public void setComponents() {
             setTitle("PILL REGISTRATION");
             jLabel1.setText("ЭМ ШИНЭЭР БҮРТГЭЛ ҮҮСГЭХ");
@@ -356,6 +361,7 @@ public abstract class AddFrame extends javax.swing.JFrame {
         }
 
         @Override
+        //when clicked on add button
         public void jButton1ActionPerformed(ActionEvent evt) {
             try{
                 String medname = txtName.getText();
@@ -405,6 +411,7 @@ public abstract class AddFrame extends javax.swing.JFrame {
         }
 
         @Override
+        //when clicked on database button
         public void jButton2ActionPerformed(ActionEvent evt) {
             DatabaseFrame.PillDatabaseFrame db = new DatabaseFrame.PillDatabaseFrame();
             db.setVisible(true);
