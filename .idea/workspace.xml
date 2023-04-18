@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="remove unnecessay files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/AddFrame$InjectionFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/AddFrame$InjectionFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/AddFrame$PillFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/AddFrame$PillFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/AddFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/AddFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame$InjectionDatabaseFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame$InjectionDatabaseFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame$PillDatabaseFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame$PillDatabaseFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Medicine/DatabaseFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Drug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Drug.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+    <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="correction after code review">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681803828519</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="correction after code review">
+      <created>1681804902744</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681804902744</updated>
+    </task>
+    <task id="LOCAL-00010" summary="correction after code review">
+      <created>1681805037974</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681805037974</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,7 +187,8 @@
     <MESSAGE value="Third commit" />
     <MESSAGE value="delete unnecessary files" />
     <MESSAGE value="remove unnecessay files" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessay files" />
+    <MESSAGE value="correction after code review" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction after code review" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
