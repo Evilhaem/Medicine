@@ -12,7 +12,7 @@ public class Connector {
             try {
             instance = DriverManager.getConnection("jdbc:mysql://localhost:3306/simple_medicine?" + "user=" + username + "&password=" + password);
             } catch (SQLException ex) {
-                Logger.getLogger(PillFrame.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AddFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return instance;

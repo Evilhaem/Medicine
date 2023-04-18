@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cdb37cd-0b16-430b-9bcf-ca489bd20132" name="Changes" comment="remove unnecessay files">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AddFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DatabaseFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-04-11_09_22_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-04-11_09_22__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Drug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Drug.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DrugFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InjectionDatabaseFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InjectionFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PillDatabaseFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PillFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/excluded/DrugFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/excluded/InjectionState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/excluded/PillState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/excluded/State.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681293235756</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="remove unnecessay files">
+      <created>1681294778903</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681294778903</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

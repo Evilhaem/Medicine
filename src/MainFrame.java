@@ -4,14 +4,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame implements ActionListener {
-    ImageIcon Img = new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\logo.png");
+    ImageIcon Img = new ImageIcon("src\\img\\logo.png");
     JPanel titlePanel = new JPanel();
     JPanel mainPanel = new JPanel();
-    JButton addPillButton = new JButton("Эм нэмэх", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\pill.jpg"), 100, 100));
-    JButton addInjectionButton = new JButton("Тариа нэмэх", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\injection.jpg"), 100, 100));
-    JButton dataPillButton = new JButton("Эм Бүртгэл", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\pill.png"), 100, 100));
-    JButton dataInjectionButton = new JButton("Тариа Бүртгэл", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\injectCircle.jpg"), 100, 100));
-    JButton closeButton = new JButton("Гарах", scaleImage(new ImageIcon("C:\\Users\\evilh\\Downloads\\Medicine\\Medicine\\src\\img\\exit.png"), 100, 100));
+    JButton addPillButton = new JButton("Эм нэмэх", scaleImage(new ImageIcon("src\\img\\pill.jpg"), 100, 100));
+    JButton addInjectionButton = new JButton("Тариа нэмэх", scaleImage(new ImageIcon("src\\img\\injection.jpg"), 100, 100));
+    JButton dataPillButton = new JButton("Эм Бүртгэл", scaleImage(new ImageIcon("src\\img\\pill.png"), 100, 100));
+    JButton dataInjectionButton = new JButton("Тариа Бүртгэл", scaleImage(new ImageIcon("src\\img\\injectCircle.jpg"), 100, 100));
+    JButton closeButton = new JButton("Гарах", scaleImage(new ImageIcon("src\\img\\exit.png"), 100, 100));
 
     MainFrame() {
         //Window settings
@@ -50,23 +50,24 @@ public class MainFrame extends JFrame implements ActionListener {
         this.setVisible(true);
     }
 
+    //Creates new window when button is clicked
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==addPillButton) {
-            PillFrame frame = new PillFrame();
+            AddFrame.PillFrame frame = new AddFrame.PillFrame();
             frame.setVisible(true);
         }
         if(e.getSource()==addInjectionButton) {
-            InjectionFrame frame = new InjectionFrame();
+            AddFrame.InjectionFrame frame = new AddFrame.InjectionFrame();
             frame.setVisible(true);
         }
         if (e.getSource()==dataPillButton) {
-            PillDatabaseFrame pillDatabaseFrame = new PillDatabaseFrame();
-            pillDatabaseFrame.setVisible(true);
+            DatabaseFrame.PillDatabaseFrame frame = new DatabaseFrame.PillDatabaseFrame();
+            frame.setVisible(true);
         }
         if (e.getSource()==dataInjectionButton) {
-            InjectionDatabaseFrame injectionDatabaseFrame = new InjectionDatabaseFrame();
-            injectionDatabaseFrame.setVisible(true);
+            DatabaseFrame.InjectionDatabaseFrame frame = new DatabaseFrame.InjectionDatabaseFrame();
+            frame.setVisible(true);
         }
         if (e.getSource()==closeButton) {
             {
@@ -78,6 +79,8 @@ public class MainFrame extends JFrame implements ActionListener {
             }
         }
     }
+
+    //Zurag croploh function
     public ImageIcon scaleImage(ImageIcon icon, int w, int h)
     {
         int nw = icon.getIconWidth();
@@ -92,6 +95,8 @@ public class MainFrame extends JFrame implements ActionListener {
         }
         return new ImageIcon(icon.getImage().getScaledInstance(nw, nh, Image.SCALE_DEFAULT));
     }
+
+    //button constructor
     public JButton buttonSet(JButton button) {
         button.setPreferredSize(new Dimension(140, 170));
         button.setVerticalTextPosition(SwingConstants.BOTTOM);

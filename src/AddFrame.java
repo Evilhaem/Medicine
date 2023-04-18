@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -12,41 +14,34 @@ import java.util.logging.Logger;
  *
  * @author anungoobyambadorj
  */
-public class PillFrame extends javax.swing.JFrame {
+public abstract class AddFrame extends javax.swing.JFrame {
+    Connection connection;
+    PreparedStatement preparedStatement;
 
-    /**
-     * Creates new form NewJFrame
-     */
-    java.sql.Connection conn;
-    PreparedStatement pst;
-
-    public PillFrame() {
+    public AddFrame() {
         initComponents();
-        conn = Connector.getInstance();
+        setComponents();
+        connection = Connector.getInstance();
     }
 
-    @SuppressWarnings("checked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
         JPanel jPanel1 = new JPanel();
-        JLabel jLabel1 = new JLabel();
-        JLabel jLabel2 = new JLabel();
+        jLabel1 = new JLabel();
+        nameLabel = new JLabel();
         txtName = new javax.swing.JTextField();
-        JLabel jLabel3 = new JLabel();
+        idLabel = new JLabel();
         txtId = new javax.swing.JTextField();
-        JLabel jLabel4 = new JLabel();
-        JLabel jLabel5 = new JLabel();
-        JLabel jLabel6 = new JLabel();
-        JLabel jLabel7 = new JLabel();
-        JLabel jLabel8 = new JLabel();
-        JLabel jLabel9 = new JLabel();
+        manuDateLabel = new JLabel();
+        purposeLabel = new JLabel();
+        expDateLabel = new JLabel();
+        quantityLabel = new JLabel();
+        ingredientsLabel = new JLabel();
+        countyLabel = new JLabel();
         txtCountry = new javax.swing.JTextField();
         txtIngredient = new javax.swing.JTextField();
         txtNum = new javax.swing.JTextField();
         txtPurpose = new javax.swing.JComboBox<>();
         JPanel jPanel2 = new JPanel();
-        // Variables declaration - do not modify//GEN-BEGIN:variables
         JButton jButton1 = new JButton();
         JButton jButton2 = new JButton();
         JButton jButton3 = new JButton();
@@ -58,7 +53,7 @@ public class PillFrame extends javax.swing.JFrame {
         JLabel jLabel11 = new JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        setTitle("MEDICINE REGISTRATION");
+
         setBackground(new java.awt.Color(255, 204, 204));
         setResizable(false);
 
@@ -66,7 +61,7 @@ public class PillFrame extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Myanmar MN", Font.BOLD, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ЭМ ШИНЭЭР БҮРТГЭЛ ҮҮСГЭХ");
+
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -82,31 +77,31 @@ public class PillFrame extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jLabel2.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
-        jLabel2.setText("Эмийн нэр:");
+        nameLabel.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
+        nameLabel.setText("Тарианы нэр:");
 
-        jLabel3.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
-        jLabel3.setText("Эмийн код:");
+        idLabel.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
+        idLabel.setText("Тарианы код:");
 
-        jLabel4.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
-        jLabel4.setText("Үйлдвэрлэсэн огноо:");
+        manuDateLabel.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
+        manuDateLabel.setText("Үйлдвэрлэсэн огноо:");
 
-        jLabel5.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
-        jLabel5.setText("Зориулалт:");
+        purposeLabel.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
+        purposeLabel.setText("Тун:");
 
-        jLabel6.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
-        jLabel6.setText("Дуусах огноо:");
+        expDateLabel.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
+        expDateLabel.setText("Дуусах огноо:");
 
-        jLabel7.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
-        jLabel7.setText("Хэмжээ, тоо ширхэг:");
+        quantityLabel.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
+        quantityLabel.setText("Тоо ширхэг:");
 
-        jLabel8.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
-        jLabel8.setText("Найрлага:");
+        ingredientsLabel.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
+        ingredientsLabel.setText("Найрлага:");
 
-        jLabel9.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
-        jLabel9.setText("Үйлдвэрлэсэн улс:");
+        countyLabel.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
+        countyLabel.setText("Үйлдвэрлэсэн улс:");
 
-        txtPurpose.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Гадуур", "Дотуур" }));
+
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -163,10 +158,10 @@ public class PillFrame extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addContainerGap(83, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2)
+                                        .addComponent(nameLabel)
                                         .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jLabel4)
+                                        .addComponent(ingredientsLabel)
+                                        .addComponent(manuDateLabel)
                                         .addComponent(jLabel10)
                                         .addComponent(txtAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -176,16 +171,16 @@ public class PillFrame extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                 .addComponent(txtExp, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(idLabel, javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(txtId, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
-                                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(quantityLabel, javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(txtNum, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
-                                        .addComponent(jLabel6))
+                                        .addComponent(expDateLabel))
                                 .addGap(79, 79, 79)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(txtCountry)
-                                        .addComponent(jLabel9)
-                                        .addComponent(jLabel5)
+                                        .addComponent(countyLabel)
+                                        .addComponent(purposeLabel)
                                         .addComponent(txtPurpose, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel11)
@@ -199,22 +194,22 @@ public class PillFrame extends javax.swing.JFrame {
                                 .addGap(42, 42, 42)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel3)
-                                                        .addComponent(jLabel9))
+                                                        .addComponent(idLabel)
+                                                        .addComponent(countyLabel))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                         .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(txtCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(38, 38, 38)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel7))
+                                        .addComponent(ingredientsLabel)
+                                        .addComponent(purposeLabel)
+                                        .addComponent(quantityLabel))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(txtIngredient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -224,8 +219,8 @@ public class PillFrame extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel6)
-                                                        .addComponent(jLabel4))
+                                                        .addComponent(expDateLabel)
+                                                        .addComponent(manuDateLabel))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(txtExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -248,89 +243,172 @@ public class PillFrame extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
+    public abstract void setComponents();
+    public abstract void jButton1ActionPerformed(java.awt.event.ActionEvent evt);
+    public abstract void jButton2ActionPerformed(java.awt.event.ActionEvent evt);
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try{
-            String medname = txtName.getText();
-            String medid = txtId.getText();
-            String medcountry = txtCountry.getText();
-            String medingredients = txtIngredient.getText();
-            String mednumber = txtNum.getText();
-            String medpurpose = Objects.requireNonNull(txtPurpose.getSelectedItem()).toString();
-            SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
-            String medmanudate = date_format.format(txtManufacturer.getDate());
-            String medexpdate = date_format.format(txtExp.getDate());
-            String medregdate = date_format.format(txtRegistration.getDate());
-            String medadditional = txtAdd.getText();
-
-            Drug.Pill pill = (Drug.Pill) DrugFactory.createDrug("PILL", medname, medid,medcountry,medingredients,mednumber,medpurpose,medmanudate, medexpdate, medregdate, medadditional);
-
-            pst = conn.prepareStatement("insert into medicinereg(name,id,country,ingredients,number,purpose,manudate,expdate,regdate,additional)values(?,?,?,?,?,?,?,?,?,?)");
-            pst.setString(1, pill.getName());
-            pst.setString(2, pill.getId());
-            pst.setString(3, pill.getCountry());
-            pst.setString(4, pill.getIngredients());
-            pst.setString(5, pill.getNumber());
-            pst.setString(6, pill.getPurpose());
-            pst.setString(7, pill.getManuDate());
-            pst.setString(8, pill.getExpDate());
-            pst.setString(9, pill.getRegDate());
-            pst.setString(10, pill.getAdditional());
-
-            pill = null;
-
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Амжилттай бүртгэгдлээ!");
-
-            txtName.setText("");
-            txtId.setText("");
-            txtCountry.setText("");
-            txtIngredient.setText("");
-            txtNum.setText("");
-            txtPurpose.setSelectedIndex(0);
-            txtManufacturer.setDate(null);
-            txtExp.setDate(null);
-            txtRegistration.setDate(null);
-            txtAdd.setText("");
-
-
-        }catch (SQLException ex) {
-            Logger.getLogger(PillFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        InjectionDatabaseFrame db = new InjectionDatabaseFrame();
-        db.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         JFrame frame = new JFrame("Exit");
         if (JOptionPane.showConfirmDialog(frame, "Гарах уу?",
-                "ЭМ БҮРТГЭХ",
+                "Эм, тарианы бүртгэлийн систем",
                 JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION)
         {
-            dispose();
+            System.exit(0);
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(() -> new PillFrame().setVisible(true));
     }
 
-    private javax.swing.JTextField txtAdd;
-    private javax.swing.JTextField txtCountry;
-    private com.toedter.calendar.JDateChooser txtExp;
-    private javax.swing.JTextField txtId;
-    private javax.swing.JTextField txtIngredient;
-    private com.toedter.calendar.JDateChooser txtManufacturer;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtNum;
-    private javax.swing.JComboBox<String> txtPurpose;
-    private com.toedter.calendar.JDateChooser txtRegistration;
-    // End of variables declaration//GEN-END:variables
+    private static javax.swing.JTextField txtAdd;
+    private static javax.swing.JTextField txtCountry;
+    private static com.toedter.calendar.JDateChooser txtExp;
+    private static javax.swing.JTextField txtId;
+    private static javax.swing.JTextField txtIngredient;
+    private static com.toedter.calendar.JDateChooser txtManufacturer;
+    private static javax.swing.JTextField txtName;
+    private static javax.swing.JTextField txtNum;
+    private static javax.swing.JComboBox<String> txtPurpose;
+    private static com.toedter.calendar.JDateChooser txtRegistration;
+    JLabel jLabel1, nameLabel, idLabel, manuDateLabel, purposeLabel, expDateLabel, quantityLabel, ingredientsLabel, countyLabel;
+
+    public static class InjectionFrame extends AddFrame {
+
+        @Override
+        public void setComponents() {
+            setTitle("INJECTION REGISTRATION");
+            jLabel1.setText("ТАРИА ШИНЭЭР БҮРТГЭЛ ҮҮСГЭХ");
+            txtPurpose.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        }
+
+        @Override
+        public void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            try{
+                String medName = txtName.getText();
+                String medId = txtId.getText();
+                String medCountry = txtCountry.getText();
+                String medIngredients = txtIngredient.getText();
+                String medNumber = txtNum.getText();
+                String medPurpose = Objects.requireNonNull(txtPurpose.getSelectedItem()).toString();
+                SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+                String medManuDate = date_format.format(txtManufacturer.getDate());
+                String medExpDate = date_format.format(txtExp.getDate());
+                String medRegDate = date_format.format(txtRegistration.getDate());
+                String medAdditional = txtAdd.getText();
+
+                Drug.Injection injection = (Drug.Injection) Drug.DrugFactory.createDrug("INJECTION", medName, medId,medCountry,medIngredients,medNumber,medPurpose,medManuDate, medExpDate, medRegDate, medAdditional);
+
+                preparedStatement = connection.prepareStatement("insert into injectionreg(name,id,country,ingredients,number,dose,manudate,expdate,regdate,additional)values(?,?,?,?,?,?,?,?,?,?)");
+                preparedStatement.setString(1, injection.getName());
+                preparedStatement.setString(2, injection.getId());
+                preparedStatement.setString(3, injection.getCountry());
+                preparedStatement.setString(4, injection.getIngredients());
+                preparedStatement.setString(5, injection.getNumber());
+                preparedStatement.setString(6, injection.getDose());
+                preparedStatement.setString(7, injection.getManuDate());
+                preparedStatement.setString(8, injection.getExpDate());
+                preparedStatement.setString(9, injection.getRegDate());
+                preparedStatement.setString(10, injection.getAdditional());
+
+                injection = null;
+
+                preparedStatement.executeUpdate();
+                JOptionPane.showMessageDialog(this, "Амжилттай бүртгэгдлээ!");
+
+                txtName.setText("");
+                txtId.setText("");
+                txtCountry.setText("");
+                txtIngredient.setText("");
+                txtNum.setText("");
+                txtPurpose.setSelectedIndex(0);
+                txtManufacturer.setDate(null);
+                txtExp.setDate(null);
+                txtRegistration.setDate(null);
+                txtAdd.setText("");
+
+
+            }catch (SQLException ex) {
+                Logger.getLogger(InjectionFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        @Override
+        public void jButton2ActionPerformed(ActionEvent evt) {
+            DatabaseFrame.InjectionDatabaseFrame db = new DatabaseFrame.InjectionDatabaseFrame();
+            db.setVisible(true);
+        }
+
+    }
+
+    public static class PillFrame extends AddFrame {
+
+        @Override
+        public void setComponents() {
+            setTitle("PILL REGISTRATION");
+            jLabel1.setText("ЭМ ШИНЭЭР БҮРТГЭЛ ҮҮСГЭХ");
+            nameLabel.setText("Эмийн нэр:");
+            idLabel.setText("Эмийн код:");
+            manuDateLabel.setText("Үйлдвэрлэсэн огноо:");
+            purposeLabel.setText("Зориулалт:");
+            expDateLabel.setText("Дуусах огноо:");
+            quantityLabel.setText("Хэмжээ, тоо ширхэг:");
+            ingredientsLabel.setText("Найрлага:");
+            countyLabel.setText("Үйлдвэрлэсэн улс:");
+            txtPurpose.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Дотуур", "Гадуур"}));
+        }
+
+        @Override
+        public void jButton1ActionPerformed(ActionEvent evt) {
+            try{
+                String medname = txtName.getText();
+                String medid = txtId.getText();
+                String medcountry = txtCountry.getText();
+                String medingredients = txtIngredient.getText();
+                String mednumber = txtNum.getText();
+                String medpurpose = Objects.requireNonNull(txtPurpose.getSelectedItem()).toString();
+                SimpleDateFormat date_format = new SimpleDateFormat("yyyy-MM-dd");
+                String medmanudate = date_format.format(txtManufacturer.getDate());
+                String medexpdate = date_format.format(txtExp.getDate());
+                String medregdate = date_format.format(txtRegistration.getDate());
+                String medadditional = txtAdd.getText();
+
+                Drug.Pill pill = (Drug.Pill) Drug.DrugFactory.createDrug("PILL", medname, medid,medcountry,medingredients,mednumber,medpurpose,medmanudate, medexpdate, medregdate, medadditional);
+
+                preparedStatement = connection.prepareStatement("insert into medicinereg(name,id,country,ingredients,number,purpose,manudate,expdate,regdate,additional)values(?,?,?,?,?,?,?,?,?,?)");
+                preparedStatement.setString(1, pill.getName());
+                preparedStatement.setString(2, pill.getId());
+                preparedStatement.setString(3, pill.getCountry());
+                preparedStatement.setString(4, pill.getIngredients());
+                preparedStatement.setString(5, pill.getNumber());
+                preparedStatement.setString(6, pill.getPurpose());
+                preparedStatement.setString(7, pill.getManuDate());
+                preparedStatement.setString(8, pill.getExpDate());
+                preparedStatement.setString(9, pill.getRegDate());
+                preparedStatement.setString(10, pill.getAdditional());
+
+                pill = null;
+
+                preparedStatement.executeUpdate();
+                JOptionPane.showMessageDialog(this, "Амжилттай бүртгэгдлээ!");
+
+                txtName.setText("");
+                txtId.setText("");
+                txtCountry.setText("");
+                txtIngredient.setText("");
+                txtNum.setText("");
+                txtPurpose.setSelectedIndex(0);
+                txtManufacturer.setDate(null);
+                txtExp.setDate(null);
+                txtRegistration.setDate(null);
+                txtAdd.setText("");
+            }catch (SQLException ex) {
+                Logger.getLogger(PillFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        @Override
+        public void jButton2ActionPerformed(ActionEvent evt) {
+            DatabaseFrame.PillDatabaseFrame db = new DatabaseFrame.PillDatabaseFrame();
+            db.setVisible(true);
+        }
+
+    }
 }

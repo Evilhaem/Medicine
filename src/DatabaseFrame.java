@@ -1,5 +1,4 @@
 import net.proteanit.sql.DbUtils;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
@@ -9,45 +8,37 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 /**
  *
  * @author anungoobyambadorj
  */
-public class PillDatabaseFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DATABASE
-     */
-    public PillDatabaseFrame() {
+public abstract class DatabaseFrame extends javax.swing.JFrame {
+
+
+    public DatabaseFrame() {
         initComponents();
+        setComponents();
         Connect();
     }
     java.sql.Connection conn;
 
     public void Connect() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            try {
-                conn = Connector.getInstance();
-                String sql = "select * from medicinereg";
-                PreparedStatement pst = conn.prepareStatement(sql);
-                ResultSet rs = pst.executeQuery();
-                jTable1.setModel(DbUtils.resultSetToTableModel(rs));
-            } catch (SQLException ex) {
-                Logger.getLogger(PillFrame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(PillFrame.class.getName()).log(Level.SEVERE, null, ex);
+            conn = Connector.getInstance();
+            PreparedStatement pst = conn.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            jTable1.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(AddFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    @SuppressWarnings("checked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
+        this.setSize(2000, 2000);
         JPanel jPanel1 = new JPanel();
-        JLabel jLabel1 = new JLabel();
-        // Variables declaration - do not modify//GEN-BEGIN:variables
+        jLabel1 = new JLabel();
         JButton jButton1 = new JButton();
         JLabel jLabel2 = new JLabel();
         txtsearch = new javax.swing.JTextField();
@@ -56,17 +47,17 @@ public class PillDatabaseFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         setTitle("DATABASE");
-        setResizable(false);
+        setResizable(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Myanmar MN", Font.BOLD, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("БҮРТГЭГДСЭН ЭМИЙН ЖАГСААЛТ");
+
 
         jButton1.setFont(new java.awt.Font("Avenir Next", Font.BOLD, 13)); // NOI18N
         jButton1.setText("Буцах");
-        jButton1.addActionListener(evt -> jButton1ActionPerformed());
+        jButton1.addActionListener(this::jButton1ActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -164,29 +155,58 @@ public class PillDatabaseFrame extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jButton1ActionPerformed() {//GEN-FIRST:event_jButton1ActionPerformed
+    public abstract void setComponents();
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void txtsearchKeyReleased() {//GEN-FIRST:event_txtsearchKeyReleased
+    private void txtsearchKeyReleased() {
         DefaultTableModel table = (DefaultTableModel)jTable1.getModel();
         String search = txtsearch.getText().toLowerCase();
         TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(table);
         jTable1.setRowSorter(tr);
         tr.setRowFilter(RowFilter.regexFilter(search));
-    }//GEN-LAST:event_txtsearchKeyReleased
+    }
 
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException |
+                 UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(InjectionDatabaseFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
         java.awt.EventQueue.invokeLater(() -> new InjectionDatabaseFrame().setVisible(true));
     }
 
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtsearch;
-    // End of variables declaration//GEN-END:variables
+    private static JLabel jLabel1;
+    String sql;
+
+    public static class InjectionDatabaseFrame extends DatabaseFrame {
+        @Override
+        public void setComponents() {
+            this.setSize(1300, 600);
+            sql = "select * from injectionreg";
+            jLabel1.setText("БҮРТГЭГДСЭН ТАРИАНЫ ЖАГСААЛТ");
+        }
+    }
+    public static class PillDatabaseFrame extends DatabaseFrame {
+        @Override
+        public void setComponents() {
+            this.setSize(1300, 600);
+            sql = "select * from medicinereg";
+            jLabel1.setText("БҮРТГЭГДСЭН ЭМИЙН ЖАГСААЛТ");
+        }
+    }
+
 }
